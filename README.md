@@ -2,12 +2,11 @@
   <img src="icon.png"><br/>
 
   <img src="https://img.shields.io/badge/license-GPL--3-blue?logo=gnu">
-  <img src="https://img.shields.io/badge/python-%3E=3.8-blue?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/python-%3E=3.9-blue?logo=python&logoColor=white">
   <img src="https://img.shields.io/badge/os-linux-blue?logo=linux&logoColor=white">
-  <img src= "https://img.shields.io/badge/crawler-selenium-blue?logo=selenium&logoColor=white"><br/>
-  <img src= "https://img.shields.io/badge/document-swagger-green?logo=swagger&logoColor=white">
   <img src="https://img.shields.io/badge/web-Django-green?logo=django&logoColor=white"><br/>
-  <img src= "https://img.shields.io/badge/deployment-heroku-purple?logo=heroku&logoColor=white"><br/>
+  <img src= "https://img.shields.io/badge/deployment-heroku-purple?logo=heroku&logoColor=white">
+  <img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=103"><br/>
 </p>
 
 # About Pwitter
@@ -20,13 +19,11 @@ You can see the deployed version of project [here](https://pwitter.herokuapp.com
 # Requirements
 
 ```markdown
-- python version 3.9 or upper
-- django version 4 or upper
+- python version > 3.9
+- django version 4
 ```
 
 # Run Locally
-
-now follow these steps :
 
 **Step 1 :** create a new virtualenv and install requirements.
 ```shell
@@ -43,6 +40,6 @@ $ sudo apt-get install libpq-dev
 $ python manage.py runserver
 ```
 
-## License
+# License
 
 [GPLV3](https://choosealicense.com/licenses/agpl-3.0/)
