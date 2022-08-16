@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -118,6 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = 'static/'
 
 # Default primary key field type
@@ -139,5 +139,3 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = "mehran.safaripour@gmail.com"
 EMAIL_HOST_PASSWORD = "sogmdtpuizeryrhq"
 DEFAULT_FROM_EMAIL = "Promethe Social"  # default sign in every email
-
-django_heroku.settings(locals())
