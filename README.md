@@ -16,6 +16,17 @@
 
 You can see the deployed version of project [here](http://pwitter.promethe.dev/) or [here](http://pwitter-promethe.fandogh.cloud/)
 
+# Features
+- [x] Based on **Django 4**
+- [x] **login** / **logout**, **register** and forget password 
+- [x] custom authentication methods
+- [x] User can **create**, **edit** and **delete** own posts
+- [x] **Follow** / **Unfollow** other users 
+- [x] **like** posts 
+- [x] **comment** and **reply** on posts
+- [x] personal **profile** for each user
+- [x] **search** mechanism
+
 # Requirements
 
 ```markdown
