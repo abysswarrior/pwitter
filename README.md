@@ -14,7 +14,7 @@
 
 # Live Demo
 
-You can see the deployed version of project [here](https://promethe-pwitter.herokuapp.com/)
+You can see the deployed version of project [here](http://pwitter.promethe.dev/) or [here](http://pwitter-promethe.fandogh.cloud/)
 
 # Requirements
 
