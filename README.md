@@ -75,6 +75,10 @@ $ fandogh service deploy --version v0.1 --name pwitter -p 8000 --hosts pwitter.p
 
 > To use `--host` option you should first verify your domain in fangogh  
 
+# Why ?
+
+I create this project to challenge my backend Skills :)
+
 # License
 
 [GPLV3](https://choosealicense.com/licenses/agpl-3.0/)
