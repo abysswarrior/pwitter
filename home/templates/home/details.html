@@ -2,66 +2,101 @@
 
 {% block content %}
 
+    <div class="row">
+        <div class="col-md-12">
 
+            <div class="card gedf-card">
 
-    <a class="text-decoration-none" href="{% url 'account:user_profile' post.user.id %}">{{ post.user|capfirst }}</a> @ <small>
-    {{ post.updated|date:"d M Y - D H:m" }}</small> <br><br>
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center">
 
-    <p>{{ post.body }}</p>
+                            <div class="ml-2">
 
-    {% if request.user.id == post.user.id %}
-        <br>
-        <a href="{% url 'home:post_delete' post.id %}" class="btn btn-danger">Delete</a>
-        <a href="{% url 'home:post_update' post.id %}" class="btn btn-info">Update</a>
-    {% endif %}
-    <hr>
+                                <div class="h5 m-0">
+                                    <a class="text-decoration-none"
+                                       href="{% url 'account:user_profile' post.user.id %}">
+                                        @{{ post.user|capfirst }}</a>
+                                </div>
+                                <div class="h7 text-muted">  {{ post.updated|date:"d M Y - D H:m" }}</div>
+                            </div>
+                        </div>
 
-    <!-- comment -->
-    {% if request.user.is_authenticated %}
-
-        <!-- like -->
-        <a href="{% url "home:post_like" post.id %}" class="{% if not can_like %}disabled{% endif %} btn btn-primary col-md-2">Like {{ post.likes_count }}</a><br>
-        <br>
-
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input class="btn btn-primary" type="submit" value="Send">
-        </form>
-    {% else %}
-        <p class="text-danger">Only logged in user can comment</p>
-    {% endif %}
-    <br>
-
-    {% for comment in comments %}
-        <div class="card">
-            <div class="card-header bg-dark text-white">{{ comment.user }} - {{ comment.created|timesince }}</div>
-            <div class="card-body bg-light">{{ comment.body }}</div>
-
-            <!-- reply form-->
-            {% if request.user.is_authenticated %}
-               <form action="{% url "home:reply_comment" post.id comment.id %}" method="post">
-                    {% csrf_token %}
-                    {{ form_reply.as_p }}
-                    <input type="submit" value="reply">
-                </form>
-            {% endif %}
-
-            <!-- replies -->
-            {% with replies=comment.rcomment.all %}
-                {% for reply in replies %}
-                    <div class="bg-primary p-1 m-2">
-                        <div class="bg-dark text-white p-2">{{ reply.user }} - {{ reply.created|timesince }}</div>
-                        <div class="text-white m-3">{{ reply.body }}</div>
                     </div>
-                {% endfor %}
-            {% endwith %}
+                </div>
+                <div class="card-body">
+                    <!-- main body -->
+                    <p class="card-text">
+                        {{ post.body }}
+                    </p>
+
+                    <!-- delete & update post -->
+                    {% if request.user.id == post.user.id %}
+                        <br>
+                        <a href="{% url 'home:post_delete' post.id %}" class="btn btn-danger">Delete</a>
+                        <a href="{% url 'home:post_update' post.id %}" class="btn btn-info">Update</a>
+                    {% endif %}
+
+                    <!-- comment -->
+                    {% if request.user.is_authenticated %}
+
+                        <!-- like -->
+                        <a href="{% url "home:post_like" post.id %}"
+                           class="{% if not can_like %}disabled{% endif %} btn btn-primary col-md-2">Like {{ post.likes_count }}</a>
+                        <br>
+                        <br>
+
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <input class="btn btn-primary" type="submit" value="Send">
+                        </form>
+                    {% else %}
+                        <p class="text-danger">Only logged in user can comment</p>
+                    {% endif %}
+                    <br>
+
+
+                </div>
+                <div class="card-footer">
+                    <!-- list of submitted comments -->
+                    {% for comment in comments %}
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">{{ comment.user }}
+                                - {{ comment.created|timesince }}</div>
+                            <div class="card-body bg-light">{{ comment.body }}</div>
+
+                            <!-- reply form-->
+                            {% if request.user.is_authenticated %}
+                                <form action="{% url "home:reply_comment" post.id comment.id %}" method="post">
+                                    {% csrf_token %}
+                                    {{ form_reply.as_p }}
+                                    <input type="submit" value="reply">
+                                </form>
+                            {% endif %}
+
+                            <!-- replies -->
+                            {% with replies=comment.rcomment.all %}
+                                {% for reply in replies %}
+                                    <div class="bg-primary p-1 m-2">
+                                        <div class="bg-dark text-white p-2">{{ reply.user }}
+                                            - {{ reply.created|timesince }}</div>
+                                        <div class="text-white m-3">{{ reply.body }}</div>
+                                    </div>
+                                {% endfor %}
+                            {% endwith %}
+
+                        </div>
+                        <br>
+                    {% empty %}
+                        <p>No comment yet</p>
+                    {% endfor %}
+                </div>
+
+            </div>
+
 
         </div>
-        <br>
-    {% empty %}
-        <p>No comment yet</p>
-    {% endfor %}
-
+    </div>
 
 {% endblock %}

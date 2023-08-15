@@ -3,16 +3,61 @@
 {% block content %}
 
     <!-- search -->
-    <form action="" method="get">
-        {{ form.as_p }}
-        <input type="submit" value="Search">
-    </form><br><br>
+    <div class="row">
+        <div class="col-md-12">
 
-    {% for post in posts %}
-        <div class="card">
-            <a href="{{ post.get_absolute_url }}" class="card-body">{{ post.body|truncatewords:8 }}</a>
+            <div class="card gedf-card">
+
+                <div class="card-body">
+                    <form action="" method="get">
+                        {{ form.as_p }}
+                        <input type="submit" value="Search">
+                    </form>
+
+                </div>
+
+            </div>
         </div>
-    {% endfor %}
 
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            {% for post in posts %}
+
+                <div class="card gedf-card">
+
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mr-2">
+                                    <img class="rounded-circle" width="45"
+                                         src="https://bootdey.com/img/Content/avatar/avatar1.png" alt>
+                                </div>
+                                <div class="ml-2">
+                                    <div class="h5 m-0">@{{ post.user }}</div>
+                                    <div class="h7 text-muted">{{ post.user.first_name }} {{ post.user.last_name }}</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i> {{ post.created }}</div>
+                        <a class="card-link" href="{{ post.get_absolute_url }}">
+                            <h5 class="card-title">{{ post.slug }}</h5>
+                        </a>
+                        <p class="card-text">
+                            {{ post.body|truncatewords:50 }}
+                        </p>
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
 
 {% endblock %}

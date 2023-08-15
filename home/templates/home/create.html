@@ -2,10 +2,24 @@
 
 {% block content %}
 
-    <form action="" method="post" novalidate>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Create" class="btn btn-primary">
-    </form>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="card gedf-card">
+
+                <div class="card-body">
+
+                    <form action="" method="post" novalidate>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Create" class="btn btn-primary">
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
 {% endblock %}

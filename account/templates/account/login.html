@@ -1,12 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>User Login</h2>
-    <form action="" method="post" class="col-md-6" novalidate>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <a href="{% url 'account:reset_password' %}">forget password?</a>
-        <br><br>
-        <input type="submit" value="Login">
-    </form>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="card gedf-card">
+
+                <div class="card-body">
+
+                    <h2>User Login</h2>
+                    <form action="" method="post" class="col-md-6" novalidate>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <a href="{% url 'account:reset_password' %}">forget password?</a>
+                        <br><br>
+                        <input type="submit" value="Login">
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}
