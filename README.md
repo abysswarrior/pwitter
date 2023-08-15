@@ -51,29 +51,27 @@ $ sudo apt-get install libpq-dev
 $ python manage.py runserver
 ```
 
-# Deploy on Fandogh
+# Screenshots
 
-[fandogh.cloud](https://www.fandogh.cloud/) is a fantastic PaaS that allows you to 
-deploy project easily. You just need to make your project dockerized.
+### Home Page
 
-To deploy project follow these commands :
+![home](screenshot/home.png)
 
-**Step 1 :** initiate the image
-```shell
-$ fandogh image init --name=pwitter
-```
+### Post Details
 
-**Step 2 :** publish the image to fandogh registry
-```shell
-$ fandogh image publish --version v0.1 
-```
+![post](screenshot/post.png)
 
-**Step 3 :** deploy the image. Done!
-```shell
-$ fandogh service deploy --version v0.1 --name pwitter -p 8000 --hosts pwitter.promethe.dev
-```
+### Profile
 
-> To use `--host` option you should first verify your domain in fangogh  
+![profile](screenshot/profile.png)
+
+### Login
+
+![login](screenshot/login.png)
+
+### Register
+
+![register](screenshot/register.png)
 
 # Why ?
 
