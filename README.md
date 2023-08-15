@@ -12,10 +12,6 @@
 # About Pwitter
 **Pwitter** is a free and open-source clone of twitter, created by the _Django_.
 
-# Live Demo
-
-You can see the deployed version of project [here](http://pwitter.promethe.dev/) or [here](http://pwitter-promethe.fandogh.cloud/)
-
 # Features
 - [x] Based on **Django 4**
 - [x] **login** / **logout**, **register** and forget password 
