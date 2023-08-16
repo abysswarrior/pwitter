@@ -43,17 +43,27 @@ off some skills, learning together, and building something that brings people cl
 $ pip install -r requirements.txt
 ```
 
-**Notice :** if you get psycopg2 `pg_config` error use this command
+**Step 2 :** just create a `static` directory in project root folder
 
 ```shell
-$ sudo apt-get install libpq-dev
+$ mkdir static
 ```
 
-**Step 2 :** run django and reach whole project in [http://localhost:8000/](http://localhost:8000/).
+**Step 3:** if you want to use **forget password** feature first create `app password` in your google account then put
+credential in `settings.py`
+```python
+EMAIL_HOST_USER = "put your gmail here"
+EMAIL_HOST_PASSWORD = "put your super secure password here"
+```
+
+**Step 3 :** run django and reach whole project in [http://localhost:8000/](http://localhost:8000/).
 
 ```shell
 $ python manage.py runserver
 ```
+
+> you can use `db.sqlite3` DB that is in this project. if you use it, the user and pass for admin test user
+> is `admin` and `12345`. enjoy the super secure credential :)
 
 # Screenshots
 
