@@ -46,7 +46,7 @@
                     <div class="card-body">
                         <div class="text-muted h7 mb-2"><i class="fa fa-clock-o"></i> {{ post.created }}</div>
                         <a class="card-link" href="{{ post.get_absolute_url }}">
-                            <h5 class="card-title">{{ post.slug }}</h5>
+                            <h5 class="card-title">{{ post.title }}</h5>
                         </a>
                         <p class="card-text">
                             {{ post.body|truncatewords:50 }}
