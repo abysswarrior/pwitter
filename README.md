@@ -27,6 +27,8 @@ off some skills, learning together, and building something that brings people cl
 - [x] **comment** and **reply** on posts
 - [x] personal **profile** for each user
 - [x] **search** mechanism
+- [ ] **Dockerized** project
+- [ ] More beautiful looking **User Profile**
 
 # Requirements
 
@@ -87,6 +89,13 @@ $ python manage.py runserver
 
 ![register](screenshot/register.png)
 
+# Contribution
+
+checkout the unchecked features. Contributions are very welcome. I appreciate any PR or feedbacks to improve this project.
+
+## You can help this project by Donating
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/promethe) 
+
 # License
 
-[GPLV3](https://choosealicense.com/licenses/agpl-3.0/)
+Made by ❤️ under [GPLV3](https://choosealicense.com/licenses/agpl-3.0/) license.
