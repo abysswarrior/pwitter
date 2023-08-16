@@ -5,7 +5,6 @@
   <img src="https://img.shields.io/badge/python-%3E=3.9-blue?logo=python&logoColor=white">
   <img src="https://img.shields.io/badge/os-linux-blue?logo=linux&logoColor=white">
   <img src="https://img.shields.io/badge/web-Django-green?logo=django&logoColor=white"><br/>
-  <img src= "https://img.shields.io/badge/deployment-heroku-purple?logo=heroku&logoColor=white">
   <img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=103"><br/>
 </p>
 
