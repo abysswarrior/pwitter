@@ -10,15 +10,20 @@
 </p>
 
 # About Pwitter
-**Pwitter** is a free and open-source clone of twitter, created by the _Django_.
+
+Hey folks! Welcome to **"Pwitter"**  a super cool open-source full-stack web app I cooked up using
+Django. If you're into social media (who isn't, right?), imagine a Twitter-like playground where you can share your
+thoughts, connect with awesome people, and just have a blast. This project is not just about code; it's about showing
+off some skills, learning together, and building something that brings people closer.
 
 # Features
+
 - [x] Based on **Django 4**
-- [x] **login** / **logout**, **register** and forget password 
+- [x] **login** / **logout**, **register** and forget password
 - [x] custom authentication methods
 - [x] User can **create**, **edit** and **delete** own posts
-- [x] **Follow** / **Unfollow** other users 
-- [x] **like** posts 
+- [x] **Follow** / **Unfollow** other users
+- [x] **like** posts
 - [x] **comment** and **reply** on posts
 - [x] personal **profile** for each user
 - [x] **search** mechanism
@@ -33,16 +38,19 @@
 # Run Locally
 
 **Step 1 :** create a new virtualenv and install requirements.
+
 ```shell
 $ pip install -r requirements.txt
 ```
 
 **Notice :** if you get psycopg2 `pg_config` error use this command
+
 ```shell
 $ sudo apt-get install libpq-dev
 ```
 
 **Step 2 :** run django and reach whole project in [http://localhost:8000/](http://localhost:8000/).
+
 ```shell
 $ python manage.py runserver
 ```
@@ -68,10 +76,6 @@ $ python manage.py runserver
 ### Register
 
 ![register](screenshot/register.png)
-
-# Why ?
-
-I create this project to challenge my backend Skills :)
 
 # License
 
