@@ -1,10 +1,9 @@
 <p align="center">
   <img src="icon.png"><br/>
 
-  <img src="https://img.shields.io/badge/license-GPL--3-blue?logo=gnu">
-  <img src="https://img.shields.io/badge/python-%3E=3.9-blue?logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/os-linux-blue?logo=linux&logoColor=white">
-  <img src="https://img.shields.io/badge/web-Django-green?logo=django&logoColor=white"><br/>
+  <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white">
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+  <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"><br/>
   <img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=103"><br/>
 </p>
 
